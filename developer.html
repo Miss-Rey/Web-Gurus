@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="developer.css" />
+    <link rel="stylesheet" href="videos.html" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+
+    <title>Web Developer Hub</title>
+  </head>
+  <body>
+    <div id="app">
+      <!-- Header -->
+      <!-- Inside the header section -->
+      <header>
+        <nav class="primary-nav">
+          <ul>
+            <li><a href="#">Sign Up</a></li>
+            <li><a href="#">Login</a></li>
+            <li><a href="#">View Followers</a></li>
+            <li><a href="#" onclick="showUploadPrompt()">Upload Video</a></li>
+
+          </ul>
+        </nav>
+        <h1>Web Developer Hub</h1>
+
+        <div id="user-profile">
+          <img
+            id="profile-photo"
+            src="https://wallpapers.com/images/thumbnail/pretty-profile-pictures-sxftqyjn7puzxpz6.webp"
+            alt="Profile Photo"
+          />
+          <input
+            type="file"
+            id="profile-photo-input"
+            accept="image/*"
+            onchange="changeProfilePhoto(event)"
+          />
+          <div id="follower-count">
+            Followers: <span id="follower-count-value">0</span>
+          </div>
+          <div id="following-count">
+            Following: <span id="following-count-value">0</span>
+          </div>
+          <div id="like-count">likes: <span id="like-count-value">0</span></div>
+        </div>
+      </header>
+
+      <!-- Main content -->
+
+      <!-- Link to navigate to the Videos page -->
+
+      <a href="videos.html" class="navigation-link">View All Videos</a>
+      <div>
+        <div id="navigation-icons" class="icon-container" style="height: 50px">
+          <i
+            id="programming-languages-icon"
+            class="fa fa-file-code"
+            aria-hidden="true"
+          ></i>
+          <i
+            id="my-videos-icon"
+            class="fa fa-video-camera"
+            aria-hidden="true"
+          ></i>
+
+          <i id="liked-videos-icon" class="fa fa-heart" aria-hidden="true"></i>
+        </div>
+      </div>
+      <div id="programming-languages" class="content-section">
+        <nav id="">
+          <div class="language-button">
+            <a href="#html-content">HTML</a>
+          </div>
+          <div class="language-button">
+            <a href="#css-content">CSS</a>
+          </div>
+          <div class="language-button">
+            <a href="#javascript-content">JavaScript</a>
+          </div>
+        </nav>
+        <nav>
+          <div class="language-button">
+            <a href="#sql-content">SQL</a>
+          </div>
+          <div class="language-button">
+            <a href="#python-content">Python</a>
+          </div>
+          <div class="language-button">
+            <a href="#java-content">Java</a>
+          </div>
+        </nav>
+        <nav>
+          <div class="language-button">
+            <a href="#php-content">PHP</a>
+          </div>
+          <div class="language-button">
+            <a href="#c-content">C</a>
+          </div>
+          <div class="language-button">
+            <a href="#cpp-content">C++</a>
+          </div>
+        </nav>
+        <nav>
+          <div class="language-button">
+            <a href="#csharp-content">C#</a>
+          </div>
+          <div class="language-button">
+            <a href="#react-content">React</a>
+          </div>
+          <div class="language-button">
+            <a href="#mysql-content">MySQL</a>
+          </div>
+        </nav>
+        <nav>
+          <div class="language-button">
+            <a href="#jquery-content">jQuery</a>
+          </div>
+          <div class="language-button">
+            <a href="#excel-content">Excel</a>
+          </div>
+          <div class="language-button">
+            <a href="#xml-content">XML</a>
+          </div>
+        </nav>
+        <nav>
+          <div class="language-button">
+            <a href="#django-content">Django</a>
+          </div>
+          <div class="language-button">
+            <a href="#numpy-content">NumPy</a>
+          </div>
+          <div class="language-button">
+            <a href="#pandas-content">Pandas</a>
+          </div>
+        </nav>
+        <nav>
+          <div class="language-button">
+            <a href="#nodejs-content">Node.js</a>
+          </div>
+          <div class="language-button">
+            <a href="#r-content">R</a>
+          </div>
+          <div class="language-button">
+            <a href="#typescript-content">TypeScript</a>
+          </div>
+        </nav>
+        <nav>
+          <div class="language-button">
+            <a href="#angular-content">Angular</a>
+          </div>
+          <div class="language-button">
+            <a href="#git-content">Git</a>
+          </div>
+          <div class="language-button">
+            <a href="#postgresql-content">PostgreSQL</a>
+          </div>
+        </nav>
+        <nav>
+          <div class="language-button">
+            <a href="#mongodb-content">MongoDB</a>
+          </div>
+          <div class="language-button">
+            <a href="#asp-content">ASP.NET</a>
+          </div>
+          <div class="language-button">
+            <a href="#aws-content">AWS</a>
+          </div>
+        </nav>
+        <nav>
+          <div class="language-button">
+            <a href="#ai-content">Artificial Intelligence</a>
+          </div>
+          <div class="language-button">
+            <a href="#go-content">Go</a>
+          </div>
+          <div class="language-button">
+            <a href="#kotlin-content">Kotlin</a>
+          </div>
+        </nav>
+        <nav>
+          <div class="language-button">
+            <a href="#sass-content">Sass</a>
+          </div>
+          <div class="language-button">
+            <a href="#vue-content">Vue.js</a>
+          </div>
+          <div class="language-button">
+            <a href="#gen-ai-content">General AI</a>
+          </div>
+        </nav>
+        <nav>
+          <div class="language-button">
+            <a href="#cybersecurity-content">Cybersecurity</a>
+          </div>
+          <div class="language-button">
+            <a href="#datascience-content">Data Science</a>
+          </div>
+          <div class="language-button">
+            <a href="#laravel-content">Laravel</a>
+          </div>
+        </nav>
+        <div class="language-button">
+          <a href="#scipy-content">SciPy</a>
+        </div>
+      </div>
+
+     
+      <div id="liked-videos" class="content content-section">
+        <!-- Content for liked videos -->
+        <button>Liked Video 1</button>
+        <button>Liked Video 2</button>
+      </div>
+
+      <!-- <div class="floating-icons">
+        <button class="action-button" id="like-button">Like</button>
+        <button class="action-button" id="comment-button">Comment</button>
+        <button class="action-button" id="share-button">Share</button>
+        <button class="action-button" id="duet-button">Duet</button>
+      </div> -->
+
+      <!-- Content for my videos -->
+      
+      <div id="my-videos" class="content-section">
+        <div class="video-container">
+          <img src="video1.jpg" alt="Video 1">
+          <p>Video 1 Title</p>
+        </div>
+        <div class="video-container">
+          <img src="video2.jpg" alt="Video 2">
+          <p>Video 2 Title</p>
+        </div>
+        <div class="video-container">
+          <img src="video3.jpg" alt="Video 3">
+          <p>Video 3 Title</p>
+        </div>
+        <!-- Add more video containers as needed -->
+      </div>
+    </div>
+
+    <script src="developer.js"></script>
+    <script src="videos.js"></script>
+    <script src="icons.js"></script>
+  </body>
+</html>
+>
